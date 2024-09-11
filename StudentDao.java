@@ -26,4 +26,19 @@ public class StudentDao {
 		}
 		return null;
 	}
+
+	// Delete a student by ID
+	public boolean deleteStudentById(int id) {
+		Student toDelete = findStudentById(id);
+		if (toDelete != null) {
+			studentList.remove(toDelete);
+			return true;
+		}
+		return false;
+	}
+
+	// Delete all students
+	public void deleteAllStudents() {
+		studentList.clear();
+	}
 }
