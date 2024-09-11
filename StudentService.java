@@ -22,4 +22,14 @@ public class StudentService {
 	public Student getStudentById(int id) {
 		return studentDao.findStudentById(id);
 	}
+
+	// Delete a student by ID
+	public boolean deleteStudentById(int id) {
+		return studentDao.deleteStudentById(id);
+	}
+
+	// Delete all students
+	public void deleteAllStudents() {
+		studentDao.deleteAllStudents();
+	}
 }
